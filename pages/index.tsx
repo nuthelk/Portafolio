@@ -1,17 +1,17 @@
 import Head from 'next/head'
-import Header from '../components/Header'
-import Hero from '../components/Hero'
-import About from '../components/About'
-import Skills from '../components/Skills'
-import Projects from '../components/Projects'
-import ContactMe from '../components/ContactMe'
+import Header from '@/components/Header'
+import Hero from '@/components/Hero'
+import About from '@/components/About'
+import Skills from '@/components/Skills'
+import Projects from '@/components/Projects'
+import ContactMe from '@/components/ContactMe'
 import Link from 'next/link'
-import { GetStaticProps } from 'next'
-import { PageInfo, Skill, Project, Social } from 'typings';
-import { fetchSkills } from '../utils/fetchSkills'
-import { fetchProjects } from '../utils/fetchProjects'
-import { fetchSocial } from '../utils/fetchSocials'
-import { fetchPageInfo } from '../utils/fetchPageInfo';
+import { GetStaticProps, NextPage } from 'next'
+import { PageInfo, Skill, Project, Social } from '@/typings';
+import { fetchPageInfo } from '@/utils/fetchPageInfo'
+import { fetchSkills } from '@/utils/fetchSkills'
+import { fetchProjects } from '@/utils/fetchProjects'
+import { fetchSocial } from '@/utils/fetchSocials'
 
 
 type Props = {
@@ -21,8 +21,7 @@ type Props = {
   socials: Social[]
 ;}
 
-const Home = ({pageInfo, skills, projects, socials}: Props) => {
-
+function Home({pageInfo, skills, projects, socials}: Props) {
   return (
     <div className='bg-[rgb(36,36,36)] text-white h-screen overflow-x-hidden snap-y snap-mandatory overflow-y-scroll z-0 scroll-smooth scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#B343EF]'>
       <Head>
@@ -69,6 +68,7 @@ const Home = ({pageInfo, skills, projects, socials}: Props) => {
   )
 }
 
+// 
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
@@ -86,3 +86,5 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     revalidate: 10,
   }
 }
+
+export default Home
