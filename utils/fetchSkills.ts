@@ -3,11 +3,16 @@ import axios from 'axios';
 
 
 export const fetchSkills = async() => {
-    const res = await fetch(`http://localhost:3000/api/getSkills`)
-    const data = await res.json()
-    const skills: Skill[] = data.skills
 
-    return skills
+    try {
+      const res = await fetch(`http://localhost:3000/api/getSkills`)
+      const data = await res.json()
+      const skills: Skill[] = data.skills
+  
+      return skills
+    } catch (error) {
+      console.log(error)
+    }
 }
 
 // export const fetchSkills = async () => {

@@ -3,11 +3,16 @@ import axios from 'axios';
 
 
 export const fetchPageInfo = async() => {
-    const res = await fetch(`http://localhost:3000/api/getPageInfo`)
-    const data = await res.json()
-    const pageInfo: PageInfo = data.pageInfo;
+    
+    try {
+      const res = await fetch(`http://localhost:3000/api/getPageInfo`)
+      const data = await res.json()
+      const pageInfo: PageInfo = data.pageInfo;
 
-    return pageInfo
+      return pageInfo
+    } catch (error) {
+      console.log(error)
+    }
 }
 
 // export const fetchPageInfo = async () => {

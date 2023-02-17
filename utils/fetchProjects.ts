@@ -3,11 +3,16 @@ import axios from 'axios';
 
 
 export const fetchProjects = async() => {
-    const res = await fetch(`http://localhost:3000/api/getProjects`)
-    const data = await res.json()
-    const projetcs: Project[] = data.projects;
+    
+    try {
+      const res = await fetch(`http://localhost:3000/api/getProjects`)
+      const data = await res.json()
+      const projetcs: Project[] = data.projects;
 
-    return projetcs
+      return projetcs
+    } catch (error) {
+      console.log(error)
+    }
 }
 // export const fetchProjects = async () => {
 //     const res = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getProjects`);
