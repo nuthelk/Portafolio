@@ -69,7 +69,7 @@ function Home({pageInfo, skills, projects, socials}: Props) {
   )
 }
 
-// a
+// aa
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
