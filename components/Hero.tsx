@@ -26,7 +26,7 @@ export default function Hero({ pageInfo }: Props) {
     return (
         <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
             <BackgroundCircles />
-            <motion.img
+            <img
                 className='relative rounded-full h-32 w-32 mx-auto object-cover '
                 src={urlFor(pageInfo?.heroImage).url()} alt="nuthelk" />
             <div className='z-20'>

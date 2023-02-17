@@ -6,12 +6,12 @@ import Skills from '@/components/Skills'
 import Projects from '@/components/Projects'
 import ContactMe from '@/components/ContactMe'
 import Link from 'next/link'
-import { GetStaticProps, NextPage } from 'next'
 import { PageInfo, Skill, Project, Social } from '@/typings';
 import { fetchPageInfo } from '@/utils/fetchPageInfo'
 import { fetchSkills } from '@/utils/fetchSkills'
 import { fetchProjects } from '@/utils/fetchProjects'
 import { fetchSocial } from '@/utils/fetchSocials'
+import { GetStaticProps } from 'next'
 
 
 type Props = {
@@ -29,40 +29,40 @@ function Home({pageInfo, skills, projects, socials}: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header socials={socials} />
+      {/* <Header socials={socials} /> */}
 
       {/* Hero */}
-      <section id="hero" className='snap-star'>
+      {/* <section id="hero" className='snap-star'>
         <Hero pageInfo={pageInfo} />
-      </section>
+      </section> */}
 
       {/* about  */}
-      <section id="about" className='snap-normal'>
+      {/* <section id="about" className='snap-normal'>
         <About pageInfo={pageInfo} />
-      </section>
+      </section> */}
 
       {/* Skill  */}
-      <section id="skills" className='snap-normal'>
+      {/* <section id="skills" className='snap-normal'>
         <Skills skills={skills} />
-      </section>
+      </section> */}
 
       {/* Projects  */}
-      <section id="projects" className='snap-normal'>
+      {/* <section id="projects" className='snap-normal'>
         <Projects projects={projects} />
-      </section>
+      </section> */}
 
       {/* contactme */}
-      <section id='contactme'>
+      {/* <section id='contactme'>
         <ContactMe />
-      </section>
+      </section> */}
 
-      <Link href="#hero">
+      {/* <Link href="#hero">
       <footer className="sticky bottom-5 w-full cursor-pointer" >
         <div className='flex items-center justify-center'>
           <img src="https://res.cloudinary.com/dzsd7vfjr/image/upload/v1675984647/Pollito_Enojado_anime_version_d7b351c9-0871-4b5e-b0e6-2cd303dab22b_myhay7.png" alt="" className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer' />
         </div>
       </footer>
-      </Link>
+      </Link> */}
       
     </div>
   )
@@ -70,21 +70,22 @@ function Home({pageInfo, skills, projects, socials}: Props) {
 
 // 
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo = await fetchPageInfo();
-  const skills: Skill[] = await fetchSkills();
-  const projects: Project[] = await fetchProjects();
-  const socials: Social[] = await fetchSocial();
+// export const getStaticProps: GetStaticProps<Props> = async () => {
 
-  return {
-    props:{
-      pageInfo,
-      skills,
-      projects,
-      socials
-    },
-    revalidate: 10,
-  }
-}
+//   const pageInfo: PageInfo = await fetchPageInfo();
+//   const skills: Skill[] = await fetchSkills();
+//   const projects: Project[] = await fetchProjects();
+//   const socials: Social[] = await fetchSocial();
+
+//   return {
+//     props:{
+//       pageInfo,
+//       skills,
+//       projects,
+//       socials
+//     },
+//     revalidate: 10,
+//   }
+// }
 
 export default Home
