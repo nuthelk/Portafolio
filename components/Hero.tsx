@@ -14,7 +14,7 @@ export default function Hero({ pageInfo }: Props) {
 
     const [text, count] = useTypewriter({
         words: ["Hi, The Name's Nuthelk Molina",
-            "I'm React Developer",
+            "I'm Front-End Developer",
             "<LovesToCode />"
         ],
         loop: true,
