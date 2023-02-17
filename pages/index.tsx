@@ -38,22 +38,22 @@ function Home({pageInfo, skills, projects, socials}: Props) {
       </section>
 
       
-      <section id="about" className='sanp-center md:snap-normal'>
+      <section id="about" className='snap-center md:snap-normal'>
         <About pageInfo={pageInfo} />
       </section>
 
       
-      <section id="skills" className='sanp-center md:snap-normal'>
+      <section id="skills" className='snap-center md:snap-normal'>
         <Skills skills={skills} />
       </section>
 
       
-      <section id="projects" className='sanp-center md:snap-normal'>
+      <section id="projects" className='snap-center md:snap-normal'>
         <Projects projects={projects} />
       </section>
 
       
-      <section id='contactme'>
+      <section id='contactme' className='snap-center md:snap-normal'>
         <ContactMe />
       </section>
 
