@@ -38,28 +38,28 @@ function Home({pageInfo, skills, projects, socials}: Props) {
       </section>
 
       
-      <section id="about" className='snap-center md:snap-normal'>
+      <section id="about" className=''>
         <About pageInfo={pageInfo} />
       </section>
 
       
-      <section id="skills" className='snap-center md:snap-normal'>
+      <section id="skills" className=''>
         <Skills skills={skills} />
       </section>
 
       
-      <section id="projects" className='snap-center md:snap-normal'>
+      <section id="projects" className=''>
         <Projects projects={projects} />
       </section>
 
       
-      <section id='contactme' className='snap-center md:snap-normal'>
+      <section id='contactme' className=''>
         <ContactMe />
       </section>
 
       <Link href="#hero">
       <footer className="sticky bottom-5 w-full cursor-pointer" >
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center justify-center pb-10'>
           <img src="https://res.cloudinary.com/dzsd7vfjr/image/upload/v1675984647/Pollito_Enojado_anime_version_d7b351c9-0871-4b5e-b0e6-2cd303dab22b_myhay7.png" alt="" className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer' />
         </div>
       </footer>
