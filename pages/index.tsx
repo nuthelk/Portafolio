@@ -26,7 +26,7 @@ function Home({pageInfo, skills, projects, socials}: Props) {
     <div className='bg-[rgb(36,36,36)] text-white h-screen overflow-x-hidden snap-y snap-mandatory overflow-y-scroll z-0 scroll-smooth scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#B343EF]'>
       <Head>
         <title>Portafolio Nuthelk</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png"/>
       </Head>
       {/* <h1>Hola mundo</h1> */}
 
