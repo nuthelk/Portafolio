@@ -10,9 +10,9 @@ import axios from 'axios';
 //     return pageInfo
 // }
 
-export const fetchPageInfo = async () => {
-    const res = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getPageInfo`);
-    const pageInfo:PageInfo = res.data.pageInfo;
+// export const fetchPageInfo = async () => {
+//     const res = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getPageInfo`);
+//     const pageInfo:PageInfo = res.data.pageInfo;
   
-    return pageInfo;
-  }
+//     return pageInfo;
+//   }

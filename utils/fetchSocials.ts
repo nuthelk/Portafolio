@@ -10,9 +10,9 @@ import axios from 'axios';
 //     return socials
 // }
 
-export const fetchSocial = async () => {
-    const res = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getSocials`);
-    const socials:Social[] = res.data.socials;
+// export const fetchSocial = async () => {
+//     const res = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getSocials`);
+//     const socials:Social[] = res.data.socials;
   
-    return socials;
-  }
+//     return socials;
+//   }
