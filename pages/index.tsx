@@ -28,30 +28,31 @@ function Home({pageInfo, skills, projects, socials}: Props) {
         <title>Portafolio Nuthelk</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <h1>Hola mundo</h1>
 
-      <Header socials={socials} />
+      {/* <Header socials={socials} />
 
-      {/* Hero */}
+      
       <section id="hero" className='snap-star'>
         <Hero pageInfo={pageInfo} />
       </section>
 
-      {/* about  */}
+      
       <section id="about" className='snap-normal'>
         <About pageInfo={pageInfo} />
       </section>
 
-      {/* Skill  */}
+      
       <section id="skills" className='snap-normal'>
         <Skills skills={skills} />
       </section>
 
-      {/* Projects  */}
+      
       <section id="projects" className='snap-normal'>
         <Projects projects={projects} />
       </section>
 
-      {/* contactme */}
+      
       <section id='contactme'>
         <ContactMe />
       </section>
@@ -62,7 +63,7 @@ function Home({pageInfo, skills, projects, socials}: Props) {
           <img src="https://res.cloudinary.com/dzsd7vfjr/image/upload/v1675984647/Pollito_Enojado_anime_version_d7b351c9-0871-4b5e-b0e6-2cd303dab22b_myhay7.png" alt="" className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer' />
         </div>
       </footer>
-      </Link>
+      </Link> */}
       
     </div>
   )
@@ -70,22 +71,22 @@ function Home({pageInfo, skills, projects, socials}: Props) {
 
 // a
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo = await fetchPageInfo();
-  const skills: Skill[] = await fetchSkills();
-  const projects: Project[] = await fetchProjects();
-  const socials: Social[] = await fetchSocial();
+// export const getStaticProps: GetStaticProps<Props> = async () => {
+//   const pageInfo: PageInfo = await fetchPageInfo();
+//   const skills: Skill[] = await fetchSkills();
+//   const projects: Project[] = await fetchProjects();
+//   const socials: Social[] = await fetchSocial();
 
-  return {
-    props:{
-      pageInfo,
-      skills,
-      projects,
-      socials
-    },
-    revalidate: 10,
+//   return {
+//     props:{
+//       pageInfo,
+//       skills,
+//       projects,
+//       socials
+//     },
+//     revalidate: 10,
    
-  }
-}
+//   }
+// }
 
 export default Home
