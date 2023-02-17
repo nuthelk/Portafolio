@@ -33,7 +33,7 @@ function Home({pageInfo, skills, projects, socials}: Props) {
       <Header socials={socials} />
 
       
-      <section id="hero" className='snap-star'>
+      <section id="hero" className='snap-start'>
         <Hero pageInfo={pageInfo} />
       </section>
 
