@@ -59,7 +59,7 @@ function Home({pageInfo, skills, projects, socials}: Props) {
 
       <Link href="#hero">
       <footer className="sticky bottom-5 w-full cursor-pointer" >
-        <div className='flex items-center justify-center pb-10'>
+        <div className='flex items-center justify-center pb-10 md:pb-0'>
           <img src="https://res.cloudinary.com/dzsd7vfjr/image/upload/v1675984647/Pollito_Enojado_anime_version_d7b351c9-0871-4b5e-b0e6-2cd303dab22b_myhay7.png" alt="" className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer' />
         </div>
       </footer>
