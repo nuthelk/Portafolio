@@ -10,10 +10,10 @@ type Props = {
 
 const Skill = ({directonLeft, skill}: Props) => {
   return (
-    <div className='group relative flex cursor-pointer'>
+    <div className='group relative flex cursor-pointer hover:scale-110 transition duration-300 ease-in-out'>
         <motion.img 
         initial={{
-            x:directonLeft ? -200: 200,
+            x:directonLeft ? -100: 100,
             opacity: 0
         }}
         transition={{duration: 1}}
